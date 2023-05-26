@@ -1,11 +1,11 @@
 #include "monty.h"
 
 /**
-* get_function - Analyzes and executes a monty bytecode instruction
-* @opcode: The opcode to interpret
-* @line_number: The line number where the opcode is located
-* @stack: Double pointer to the top of the stack
-*/
+ * get_function - Analyzes and executes a monty bytecode instruction
+ * @opcode: The opcode to interpret
+ * @line_number: The line number where the opcode is located
+ * @stack: Double pointer to the top of the stack
+ */
 void get_function(char *opcode, unsigned int line_number, stack_t **stack)
 {
 	instruction_t op_func[] = {
@@ -16,8 +16,7 @@ void get_function(char *opcode, unsigned int line_number, stack_t **stack)
 		{"swap", _swap},
 		{"add", _add},
 		{"nop", _nop},
-		{NULL, NULL}
-	};
+		{NULL, NULL}};
 	int i = 0;
 
 	if (!opcode)
